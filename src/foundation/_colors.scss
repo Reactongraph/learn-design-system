@@ -4,6 +4,7 @@
 /*=============================================
 =            Global text colors               =
 =============================================*/
+@import './variables';
 
 $body-text-color: var(--dse-body-text-color, $dark) !default;
 $body-bg-color: var(--dse-body-bg-color, $white) !default;
