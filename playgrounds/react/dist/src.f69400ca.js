@@ -28854,6 +28854,41 @@ const Button = ({
   }, label);
 };
 exports.B = Button;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@designsystem/react/lib/Color-vdGo2JtP.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.S = exports.C = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const spaces = {
+  xxxs: "xxxs",
+  xxs: "xxs",
+  xs: "xs",
+  sm: "sm",
+  md: "md",
+  lg: "lg",
+  xl: "xl",
+  xxl: "xxl",
+  xxxl: "xxxl"
+};
+var Spacing = exports.S = Object.freeze(spaces);
+const Color = ({
+  hexcode,
+  height = Spacing.sm,
+  width = Spacing.sm
+}) => {
+  const className = `dse-width-${width} dse-height-${height} `;
+  return _react.default.createElement("div", {
+    className: className,
+    style: {
+      backgroundColor: hexcode
+    }
+  });
+};
+exports.C = Color;
 },{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@designsystem/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -28866,9 +28901,22 @@ Object.defineProperty(exports, "Button", {
     return _ButtonLUnlYWN.B;
   }
 });
+Object.defineProperty(exports, "Color", {
+  enumerable: true,
+  get: function () {
+    return _ColorVdGo2JtP.C;
+  }
+});
+Object.defineProperty(exports, "Spacing", {
+  enumerable: true,
+  get: function () {
+    return _ColorVdGo2JtP.S;
+  }
+});
 var _ButtonLUnlYWN = require("./Button-LUnlYWN6.js");
+var _ColorVdGo2JtP = require("./Color-vdGo2JtP.js");
 require("react");
-},{"./Button-LUnlYWN6.js":"../../../node_modules/@designsystem/react/lib/Button-LUnlYWN6.js","react":"../../../node_modules/react/index.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./Button-LUnlYWN6.js":"../../../node_modules/@designsystem/react/lib/Button-LUnlYWN6.js","./Color-vdGo2JtP.js":"../../../node_modules/@designsystem/react/lib/Color-vdGo2JtP.js","react":"../../../node_modules/react/index.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -28919,7 +28967,13 @@ function reloadCSS() {
   }, 50);
 }
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@designsystem/scss/lib/Button.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@designsystem/scss/lib/Utilities.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@designsystem/scss/lib/Button.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -28931,12 +28985,17 @@ module.exports = reloadCSS;
 var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 var _react2 = require("@designsystem/react");
+require("@designsystem/scss/lib/Utilities.css");
 require("@designsystem/scss/lib/Button.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-_reactDom.default.render(_react.default.createElement(_react2.Button, {
+_reactDom.default.render(_react.default.createElement("div", null, _react.default.createElement(_react2.Button, {
   label: "Example Button"
-}), document.querySelector('#root'));
-},{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","@designsystem/react":"../../../node_modules/@designsystem/react/lib/index.js","@designsystem/scss/lib/Button.css":"../../../node_modules/@designsystem/scss/lib/Button.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+}), _react.default.createElement(_react2.Color, {
+  hexcode: "#000",
+  width: "lg",
+  height: "lg"
+})), document.querySelector("#root"));
+},{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","@designsystem/react":"../../../node_modules/@designsystem/react/lib/index.js","@designsystem/scss/lib/Utilities.css":"../../../node_modules/@designsystem/scss/lib/Utilities.css","@designsystem/scss/lib/Button.css":"../../../node_modules/@designsystem/scss/lib/Button.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28961,7 +29020,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41861" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34979" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
