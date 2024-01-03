@@ -19,6 +19,7 @@ plaintext
 Copy code
 # Ignore node_modules directory
 node_modules/
+lib/*
 
 # Ignore log files and other generated files
 *.log
