@@ -3,11 +3,12 @@ import {FontSize} from '@designsystem/foundation';
 
 interface TextProps {
   size?: keyof typeof FontSize;
+  text?: string,
 }
 
-const Text: React.FunctionComponent<TextProps> = ({size = FontSize.base}) => {
-  const className = `dse-width-${size}`;
-  return <div className={className}></div>;
+const Text: React.FunctionComponent<TextProps> = ({size = FontSize.base, text}) => {
+  const className = `dse-text-${size}`;
+  return <div className={className}>{text}</div>;
 };
 
 export default Text;
